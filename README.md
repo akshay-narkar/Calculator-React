@@ -38,7 +38,7 @@ If you want to repack the file
 
 ## Live Link of the project
 
-[Live-Default-App](https://openweatherappmicro.netlify.app/)
+[Live-Default-App]()
 
 ## Author
 
