@@ -20,21 +20,17 @@ A calculator app to be built using the React Library for JavaScript
 
 ## Getting Started
 
-<!-- To set up a local copy of the project
+To set up a local copy of the project
 
-- `git clone git@github.com:akshay-narkar/weatherapp.git`
-- `cd weatherapp`
-- `git pull origin feature`
+- `git clone git@github.com:akshay-narkar/Calculator-React.git`
+- `cd Calculator-React`
+- `git pull origin setup`
 
 If you want to repack the file
 
 - Run `npm install` on the terminal to install dependancies
 - Run `npm run build` to bundle the files in the src folder & product ouput in dist folder
 - Run `npm run start` to check live server
-
-  or
-
-- Go to the dist folder and open index.html -->
 
 ## Live Link of the project
 
