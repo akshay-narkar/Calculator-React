@@ -14,7 +14,7 @@ A calculator app to be built using the React Library for JavaScript
 
 ## Built With
 
-- React Library
+- React JS Library
 - HTML
 - CSS
 
