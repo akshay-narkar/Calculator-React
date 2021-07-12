@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 function Display(props) {
   const { result } = props;
   return (
-    <React.Fragment key="">
+    <>
       {result}
-    </React.Fragment>
+    </>
   );
 }
 

@@ -1,12 +1,12 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 function Button(props) {
   const { name } = props;
   return (
-    <Fragment key="">
+    <>
       <button type="button">{name}</button>
-    </Fragment>
+    </>
 
   );
 }

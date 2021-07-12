@@ -3,7 +3,7 @@ import Button from './Button';
 
 function ButtonPanel() {
   return (
-    <React.Fragment key="">
+    <>
       <div>
         <Button name="AC" />
         <Button name="+/-" />
@@ -33,7 +33,7 @@ function ButtonPanel() {
         <Button name="." />
         <Button name="=" />
       </div>
-    </React.Fragment>
+    </>
   );
 }
 
