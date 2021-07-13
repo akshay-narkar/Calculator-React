@@ -15,7 +15,6 @@ function App() {
       <ButtonPanel />
       <br />
       <Display result="25" />
-
     </>
   );
 }
