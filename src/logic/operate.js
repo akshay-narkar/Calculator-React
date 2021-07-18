@@ -9,6 +9,9 @@ function operate(numberone, numbertwo, operation) {
       x = numberOne.div(100);
       return x.toString();
     case '/':
+      if (numberTwo.toString() === '0') {
+        return 'Divide by 0 Error';
+      }
       x = numberOne.div(numberTwo);
       return x.toString();
     case 'X':
