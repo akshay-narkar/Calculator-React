@@ -3,17 +3,24 @@ import Big from 'big.js';
 function operate(numberone, numbertwo, operation) {
   const numberOne = Big(numberone);
   const numberTwo = Big(numbertwo);
+  let x = 0;
   switch (operation) {
     case '%':
-      return numberOne.div(100);
+      x = numberOne.div(100);
+      return x.toString();
     case '/':
-      return numberOne.div(numberTwo);
+      x = numberOne.div(numberTwo);
+      return x.toString();
     case 'X':
-      return numberOne.times(numberTwo);
+      x = numberOne.times(numberTwo);
+      return x.toString();
     case '+':
-      return numberOne.plus(numberTwo);
+      x = numberOne.plus(numberTwo);
+      return x.toString();
     case '-':
-      return numberOne.minus(numberTwo);
+      x = numberOne.minus(numberTwo);
+      return x.toString();
+
     default:
       return 'Symbol not recognized';
   }
