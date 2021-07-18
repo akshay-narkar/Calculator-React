@@ -24,7 +24,7 @@ To set up a local copy of the project
 
 - `git clone git@github.com:akshay-narkar/Calculator-React.git`
 - `cd Calculator-React`
-- `git pull origin setup`
+- `git branch statefulcomps`
 
 If you want to repack the file
 
