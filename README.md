@@ -1,65 +1,52 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+# React Calculator
 
-# Project Name
+A calculator app to be built using the React Library for JavaScript
 
-> One paragraph statement about the project.
+<!-- ## OpenWeather screenshot
 
-![screenshot](./app_screenshot.png)
+<img src="/src/screenshot.png"/> -->
 
-Additional description about the project and its features.
+<!-- In this project we build a Weather app with vanilla javascript & webpack where you can:
+
+- Input City name
+- Get weather details
+- Toggle the Temperature unit -->
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
-
-## Live Demo
-
-[Live Demo Link](https://livedemo.com)
-
+- React JS Library
+- HTML
+- CSS
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+To set up a local copy of the project
 
+- `git clone git@github.com:akshay-narkar/Calculator-React.git`
+- `cd Calculator-React`
+- `git branch statefulcomps`
 
-To get a local copy up and running follow these simple example steps.
+If you want to repack the file
 
-### Prerequisites
+- Run `npm install` on the terminal to install dependancies
+- Run `npm run build` to bundle the files in the src folder & product ouput in dist folder
+- Run `npm run start` to check live server
 
-### Setup
+## Live Link of the project
 
-### Install
+[Live-Milestone 1-App](https://calculator-react-microakshay.herokuapp.com/)
 
-### Usage
+## Author
 
-### Run tests
+👤 **Akshay Narkar**
 
-### Deployment
-
-
-
-## Authors
-
-👤 **Author1**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- Github: [@akshay-narkar](https://github.com/akshay-narkar)
+- Twitter: [Akshay](https://www.twitter.com/akidoit)
+- Linkedin: [Akshay Narkar](https://www.linkedin.com/in/akshaynarkar25/)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](../../issues/).
 
 ## Show your support
 
@@ -67,10 +54,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Thanks to Odin project for the tutorials.
 
 ## 📝 License
 
-This project is [MIT](./MIT.md) licensed.
+This project is [MIT](LICENSE) licensed.

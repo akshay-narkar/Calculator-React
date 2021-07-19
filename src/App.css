@@ -1,0 +1,37 @@
+.container {
+  width: 600px;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.display {
+  font-size: 40px;
+  background-color: #777;
+  display: flex;
+  height: 100px;
+  color: white;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.op-btn {
+  border: 2px solid rgb(197, 197, 197);
+
+  font-size: 40px;
+  width: 25%;
+  background-color: #fd8d0e;
+}
+.btn {
+  border: 2px solid rgb(197, 197, 197);
+  font-size: 40px;
+  width: 25%;
+  background-color: #dddd;
+}
+.zero {
+  font-size: 40px;
+  width: 50%;
+}
+
+.row {
+  height: 85px;
+  display: flex;
+}
