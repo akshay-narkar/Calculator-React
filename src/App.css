@@ -1,5 +1,6 @@
 .container {
-  width: 600px;
+  margin: auto;
+  width: 606px;
   border: 1px solid rgb(0, 0, 0);
 }
 
@@ -11,6 +12,10 @@
   color: white;
   align-items: center;
   justify-content: flex-end;
+}
+
+#text {
+  overflow: hidden;
 }
 
 .op-btn {
