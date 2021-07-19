@@ -1,24 +1,35 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Button(props) {
-  const { name, onClick } = props;
-  return (
-    <>
+export default function Button(props) {
+  const {
+    buttonName, isOperator, isZero, clickHandler,
+  } = props;
+  if (isOperator) {
+    return (
       <button
         type="button"
-        onClick={onClick}
+        className="op-btn"
+        onClick={clickHandler}
       >
-        {name}
+        {buttonName}
       </button>
-    </>
-
+    );
+  }
+  return (
+    <button
+      type="button"
+      className={isZero ? 'btn zero' : 'btn'}
+      onClick={clickHandler}
+    >
+      {buttonName}
+    </button>
   );
 }
 
 Button.propTypes = {
-  name: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired,
+  buttonName: PropTypes.string.isRequired,
+  isZero: PropTypes.bool.isRequired,
+  isOperator: PropTypes.bool.isRequired,
+  clickHandler: PropTypes.func.isRequired,
 };
-
-export default Button;

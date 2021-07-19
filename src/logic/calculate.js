@@ -1,71 +1,54 @@
 import Big from 'big.js';
 import operate from './operate';
 
-function calculate(data, button) {
-  const { total, next, operation } = data;
-  const data1 = {
-    total1: total,
-    next1: next,
-    operation1: operation,
-    nonoperation: null,
-    decimal: null,
-  };
+Big.strict = true;
 
-  switch (true) {
-    case button === '.':
-      data1.next1 = '.';
-      data1.decimal = true;
-      return data1;
-    case button === '+/-':
-      if (data1.next1) {
-        data1.next1 = Big(data1.next1).times(-1);
-        data1.nonoperation = true;
-      }
-      return data1;
-    case button === 'AC':
-      data1.total1 = null;
-      data1.next1 = null;
-      data1.operation1 = null;
-      data1.nonoperation = null;
-      return data1;
-    case button === '=':
-      if (data1.total1 && data1.operation1 && data1.next1 !== '') {
-        data1.total1 = operate(data1.total1, data1.next1, data1.operation1);
-        data1.next1 = data1.total1;
-        data1.operation1 = null;
-      } else {
-        data1.next1 = '';
-      }
-      return data1;
-    case button >= 0 && button <= 10:
-      data1.next1 = button;
-      data1.operation1 = null;
-      return data1;
-    default:
-      if (data1.next1 !== '' && data1.next1 !== null) {
-        if (data1.operation1 && data1.total1) {
-          data1.total1 = operate(data1.total1, data1.next1, data1.operation1);
-          data1.next1 = data1.total1;
-          data1.operation1 = button;
-        } else if ((data1.operation1 || data1.operation1 == null) && button === '%') {
-          data1.operation1 = '%';
-          data1.total1 = data1.next1;
-          data1.total1 = operate(data1.total1, data1.next1, data1.operation1);
-          data1.next1 = data1.total1;
-          data1.operation1 = null;
-        } else if (data1.operation1) {
-          data1.total1 = 'xyz';
-          data1.next1 = data1.total1;
-          data1.operation1 = button;
-        } else if (data1.operation1 == null) {
-          data1.operation1 = button;
-          data1.total1 = data1.next1;
-          data1.next1 = '';
-        }
-      }
+const calculate = (dataObject, buttonName) => {
+  const { operation, total, next } = dataObject;
 
-      return data1;
+  const numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+  const operators = ['-', '+', '÷', 'x'];
+  const newDataObject = { ...dataObject };
+  if (buttonName === 'AC') {
+    newDataObject.total = null;
+    newDataObject.next = null;
+    newDataObject.operation = null;
   }
-}
+  if (numbers.includes(buttonName)) {
+    newDataObject.total = `${(total === null || total === 'error') ? buttonName : total + buttonName}`;
+  }
 
+  if (buttonName === '.') {
+    if (total === null) {
+      newDataObject.total = '0'.concat('.');
+    } else if (total && total.indexOf(buttonName) === -1) {
+      newDataObject.total = total.concat('.');
+    }
+  }
+  if (buttonName === '+/-' && total && parseFloat(total)) {
+    const newTotal = Big(total);
+    newDataObject.total = newTotal.times(-1).toString();
+  }
+  if (buttonName === '%' && total && parseFloat(total)) {
+    const newTotal = Big(total);
+    newDataObject.total = newTotal.div(100).toString();
+  }
+  if (buttonName === '=' && operation && total && next) {
+    const newTotal = operate(next, total, operation);
+    newDataObject.operation = null;
+    newDataObject.total = newTotal.toString();
+  }
+
+  if (operators.includes(buttonName)) {
+    if (operation) {
+      newDataObject.operation = buttonName;
+    } else {
+      newDataObject.operation = buttonName;
+      newDataObject.next = total;
+      newDataObject.total = null;
+    }
+  }
+
+  return newDataObject;
+};
 export default calculate;
