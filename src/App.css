@@ -15,17 +15,18 @@
 
 .op-btn {
   border: 2px solid rgb(197, 197, 197);
-
   font-size: 40px;
   width: 25%;
   background-color: #fd8d0e;
 }
+
 .btn {
   border: 2px solid rgb(197, 197, 197);
   font-size: 40px;
   width: 25%;
   background-color: #dddd;
 }
+
 .zero {
   font-size: 40px;
   width: 50%;
