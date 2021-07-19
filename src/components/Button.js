@@ -29,7 +29,12 @@ export default function Button(props) {
 
 Button.propTypes = {
   buttonName: PropTypes.string.isRequired,
-  isZero: PropTypes.bool.isRequired,
-  isOperator: PropTypes.bool.isRequired,
+  isZero: PropTypes.bool,
+  isOperator: PropTypes.bool,
   clickHandler: PropTypes.func.isRequired,
+};
+
+Button.defaultProps = {
+  isZero: false,
+  isOperator: false,
 };
