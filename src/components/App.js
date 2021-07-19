@@ -24,6 +24,7 @@ export default class App extends React.Component {
       return;
     }
     const { next, operation, total } = calculate(dataObject, buttonName);
+    console.log({ next, operation, total });
     this.setState(() => (
       {
         next,
