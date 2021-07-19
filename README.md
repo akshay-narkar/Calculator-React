@@ -34,7 +34,7 @@ If you want to repack the file
 
 ## Live Link of the project
 
-[Live-Milestone 1-App](https://calculator-react-microakshay.herokuapp.com/)
+[Live-Calculator](https://calculator-react-microakshay.herokuapp.com/)
 
 ## Author
 
