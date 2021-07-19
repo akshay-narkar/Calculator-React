@@ -1,21 +1,40 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Display(props) {
-  const { result } = props;
-  return (
-    <>
-      {result}
-    </>
-  );
-}
+export default class Display extends React.Component {
+  constructor(props) {
+    super(props);
+    this.text = React.createRef();
+  }
 
-Display.defaultProps = {
-  result: '0',
-};
+  componentDidUpdate() {
+    const { result } = this.props;
+    const node = this.text.current;
+    node.style.fontSize = '40px';
+    const width = node.scrollWidth;
+    const overflowWidth = width - 320;
+    if (result) {
+      const resultLength = result.length;
+      if (overflowWidth > 0 && resultLength > 16) {
+        node.style.fontSize = '30px';
+      }
+    }
+  }
+
+  render() {
+    const { result } = this.props;
+    return (
+      <div className="display">
+        <span ref={this.text} id="text">{result}</span>
+      </div>
+    );
+  }
+}
 
 Display.propTypes = {
   result: PropTypes.string,
 };
 
-export default Display;
+Display.defaultProps = {
+  result: null,
+};

@@ -1,40 +1,73 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import Button from './Button';
 
-function ButtonPanel() {
-  return (
-    <>
-      <div>
-        <Button name="AC" />
-        <Button name="+/-" />
-        <Button name="%" />
-        <Button name="/" />
+export default class ButtonPanel extends React.Component {
+  renderInput = (buttonName) => {
+    const { clickHandler } = this.props;
+    const operators = ['-', '+', '÷', 'x'];
+    if (operators.includes(buttonName) || buttonName === '=') {
+      return (
+        <Button
+          clickHandler={() => { clickHandler(buttonName); }}
+          buttonName={buttonName}
+          isOperator
+        />
+      );
+    } if (buttonName === '0') {
+      return (
+        <Button
+          clickHandler={() => { clickHandler(buttonName); }}
+          buttonName={buttonName}
+          isZero
+        />
+      );
+    }
+    return (
+      <Button
+        clickHandler={() => { clickHandler(buttonName); }}
+        buttonName={buttonName}
+      />
+    );
+  }
+
+  render() {
+    return (
+      <div className="button-panel">
+        <div className="row">
+          {this.renderInput('AC')}
+          {this.renderInput('+/-')}
+          {this.renderInput('%')}
+          {this.renderInput('÷')}
+        </div>
+        <div className="row">
+          {this.renderInput('7')}
+          {this.renderInput('8')}
+          {this.renderInput('9')}
+          {this.renderInput('x')}
+        </div>
+        <div className="row">
+          {this.renderInput('4')}
+          {this.renderInput('5')}
+          {this.renderInput('6')}
+          {this.renderInput('-')}
+        </div>
+        <div className="row">
+          {this.renderInput('1')}
+          {this.renderInput('2')}
+          {this.renderInput('3')}
+          {this.renderInput('+')}
+        </div>
+        <div className="row">
+          {this.renderInput('0')}
+          {this.renderInput('.')}
+          {this.renderInput('=')}
+        </div>
       </div>
-      <div>
-        <Button name="7" />
-        <Button name="8" />
-        <Button name="9" />
-        <Button name="X" />
-      </div>
-      <div>
-        <Button name="4" />
-        <Button name="5" />
-        <Button name="6" />
-        <Button name="-" />
-      </div>
-      <div>
-        <Button name="1" />
-        <Button name="2" />
-        <Button name="3" />
-        <Button name="+" />
-      </div>
-      <div>
-        <Button name="0" />
-        <Button name="." />
-        <Button name="=" />
-      </div>
-    </>
-  );
+    );
+  }
 }
 
-export default ButtonPanel;
+ButtonPanel.propTypes = {
+  clickHandler: PropTypes.func.isRequired,
+};
