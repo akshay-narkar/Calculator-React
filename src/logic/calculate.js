@@ -23,7 +23,7 @@ const calculate = (dataObject, buttonName) => {
   }
 
   if (buttonName === '.') {
-    if (total === null) {
+    if (total === null || total === next) {
       newDataObject.total = '0'.concat('.');
     } else if (total && total.indexOf(buttonName) === -1) {
       newDataObject.total = total.concat('.');
