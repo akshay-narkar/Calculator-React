@@ -11,7 +11,7 @@ export default function ButtonPanel(props) {
         <Button
           clickHandler={() => { clickHandler(buttonName); }}
           buttonName={buttonName}
-          isOperator
+          color="#fd8d0e"
         />
       );
     } if (buttonName === '0') {
@@ -19,7 +19,7 @@ export default function ButtonPanel(props) {
         <Button
           clickHandler={() => { clickHandler(buttonName); }}
           buttonName={buttonName}
-          isZero
+          wide="50%"
         />
       );
     }
