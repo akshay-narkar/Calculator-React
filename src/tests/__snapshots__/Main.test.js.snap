@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UI is unaltered wrt first snapshot 1`] = `
+Array [
+  <h1
+    style={
+      Object {
+        "color": "black",
+        "fontSize": 50,
+        "marginBottom": 50,
+      }
+    }
+  >
+    Welcome to our page!
+  </h1>,
+  <p
+    style={
+      Object {
+        "fontSize": 20,
+        "marginBottom": 30,
+      }
+    }
+  >
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui o!cia deserunt mollit anim id est laborum. Ipsu
+  </p>,
+  <p
+    style={
+      Object {
+        "fontSize": 20,
+        "marginBottom": 30,
+      }
+    }
+  >
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui o!cia deserunt mollit anim id est laborum. Ipsu
+  </p>,
+]
+`;
