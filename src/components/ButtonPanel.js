@@ -67,5 +67,9 @@ export default function ButtonPanel(props) {
 }
 
 ButtonPanel.propTypes = {
-  clickHandler: PropTypes.func.isRequired,
+  clickHandler: PropTypes.func,
+};
+
+ButtonPanel.defaultProps = {
+  clickHandler() {},
 };

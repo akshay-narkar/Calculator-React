@@ -21,11 +21,13 @@ export default function Button(props) {
 Button.propTypes = {
   wide: PropTypes.string,
   color: PropTypes.string,
-  buttonName: PropTypes.string.isRequired,
-  clickHandler: PropTypes.func.isRequired,
+  buttonName: PropTypes.string,
+  clickHandler: PropTypes.func,
 };
 
 Button.defaultProps = {
   wide: '25%',
   color: '#ddd',
+  buttonName: null,
+  clickHandler() {},
 };
