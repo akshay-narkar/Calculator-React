@@ -4,7 +4,7 @@ A calculator app built with React.js using React Hooks and Routers. App contains
 
 ## Calculator screenshot
 
-<img src="./calc.png" width = "50%" >
+![screenshot](./calc.png)
 
 ## Built With
 
