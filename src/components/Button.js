@@ -3,23 +3,14 @@ import PropTypes from 'prop-types';
 
 export default function Button(props) {
   const {
-    buttonName, isOperator, isZero, clickHandler,
+    buttonName, wide, color, clickHandler,
   } = props;
-  if (isOperator) {
-    return (
-      <button
-        type="button"
-        className="op-btn"
-        onClick={clickHandler}
-      >
-        {buttonName}
-      </button>
-    );
-  }
+
   return (
     <button
+      style={{ width: wide, backgroundColor: color }}
       type="button"
-      className={isZero ? 'btn zero' : 'btn'}
+      className="btn"
       onClick={clickHandler}
     >
       {buttonName}
@@ -28,13 +19,15 @@ export default function Button(props) {
 }
 
 Button.propTypes = {
-  buttonName: PropTypes.string.isRequired,
-  isZero: PropTypes.bool,
-  isOperator: PropTypes.bool,
-  clickHandler: PropTypes.func.isRequired,
+  wide: PropTypes.string,
+  color: PropTypes.string,
+  buttonName: PropTypes.string,
+  clickHandler: PropTypes.func,
 };
 
 Button.defaultProps = {
-  isZero: false,
-  isOperator: false,
+  wide: '25%',
+  color: '#ddd',
+  buttonName: null,
+  clickHandler() {},
 };

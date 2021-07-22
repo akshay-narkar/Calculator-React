@@ -1,7 +1,16 @@
+.calcclass {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .container {
-  margin: auto;
-  width: 606px;
+  width: 700px;
   border: 1px solid rgb(0, 0, 0);
+}
+
+.calclefttext {
+  margin: 0;
+  font-size: 54px;
 }
 
 .display {
@@ -10,34 +19,58 @@
   display: flex;
   height: 100px;
   color: white;
+  font-weight: bold;
   align-items: center;
   justify-content: flex-end;
+  padding: 5px;
 }
 
 #text {
   overflow: hidden;
 }
 
-.op-btn {
-  border: 2px solid rgb(197, 197, 197);
-  font-size: 40px;
-  width: 25%;
-  background-color: #fd8d0e;
-}
-
 .btn {
   border: 2px solid rgb(197, 197, 197);
   font-size: 40px;
-  width: 25%;
-  background-color: #dddd;
-}
-
-.zero {
-  font-size: 40px;
-  width: 50%;
 }
 
 .row {
   height: 85px;
   display: flex;
+}
+
+.maindiv {
+  margin: 50px;
+}
+
+header {
+  padding: 1rem;
+  background-color: #333;
+  margin-bottom: 5rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ulnav {
+  list-style-type: none;
+}
+
+.headername {
+  color: rgb(231, 231, 8);
+  font-size: 40px;
+  margin: 0;
+}
+
+.textinlink {
+  color: white;
+  font-size: 25px;
+  text-decoration: none;
+}
+
+.textinlink:hover {
+  color: rgb(231, 231, 8);
 }

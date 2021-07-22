@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UI is unaltered wrt first snapshot 1`] = `
+<h4
+  style={
+    Object {
+      "color": "black",
+      "display": "block",
+      "fontSize": 30,
+      "marginBottom": 50,
+      "marginTop": 150,
+      "paddingLeft": 50,
+      "paddingRight": 50,
+    }
+  }
+>
+  Mathematics is not about numbers, equations, computations, or algorithms: it is about understanding. – William Paul Thurston
+</h4>
+`;
