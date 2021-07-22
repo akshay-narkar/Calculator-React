@@ -5,15 +5,15 @@ export default function Quote() {
     marginBottom: 50,
     display: 'block',
     marginTop: 150,
-    paddingLeft: 200,
-    paddingRight: 200,
+    paddingLeft: 50,
+    paddingRight: 50,
   };
 
   return (
     <>
       <h4 style={heading}>
         Mathematics is not about numbers, equations, computations, or algorithms:
-        it is about understanding. –William Paul Thurston
+        it is about understanding. – William Paul Thurston
       </h4>
 
     </>
