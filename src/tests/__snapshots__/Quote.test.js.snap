@@ -9,11 +9,11 @@ exports[`UI is unaltered wrt first snapshot 1`] = `
       "fontSize": 30,
       "marginBottom": 50,
       "marginTop": 150,
-      "paddingLeft": 200,
-      "paddingRight": 200,
+      "paddingLeft": 50,
+      "paddingRight": 50,
     }
   }
 >
-  Mathematics is not about numbers, equations, computations, or algorithms: it is about understanding. –William Paul Thurston
+  Mathematics is not about numbers, equations, computations, or algorithms: it is about understanding. – William Paul Thurston
 </h4>
 `;
